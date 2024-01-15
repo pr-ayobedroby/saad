@@ -1,0 +1,35 @@
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>
+         animation
+      </title>
+      <style type = "text/css">
+        div{
+padding: 5px 20px;
+text-align:center;
+background-color:red;
+width:200px;
+height:200px;
+border-bottom-right-radius:15px;
+border-top-left-radius:15px;
+margin-left:1000px;
+box-shadow:25px 25px 50px black;
+}		
+		 div{ position:relative;
+		 animation:movingimage linear 5s 1s 5 alternate;}
+		 
+		 @keyframes movingimage
+   {
+   0%  {opacity;0 left:50px;top:0px;}
+   25% {opacity;0 left:50px;top:100px;}
+   50% {opacity;0 left:50px;top:0px;}
+   75% {opacity;0 left:50px;top:100px;}
+  100% {opacity;0 left:50px;top:0px;}
+   }
+      </style>
+   </head>
+   <body>
+      <div>ayman</div>
+   </body>
+</html>
