@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>                
+   <head>
+      <meta charset = "utf-8">
+      <title>Solution 16</title>
+     
+      <style type="text/css">
+          tcaption {font-size:20pt;}
+          .theadings {background-color:darkblue;
+                 color:white;
+                 font-size:14pt;} 
+          .yellow {background-color:yellow;}           
+          .skyblue {background-color:skyblue;}           
+          .orange {background-color:orange;}           
+          .red {background-color:red;}           
+      </style>
+     
+      <script>  
+	var input1;
+	var input2;
+	var studentName=new Array();
+	var mark=new Array();
+	var sum;
+	var average;
+	studentName[0]= window.prompt("enter the student's name");
+	input1= window.prompt("enter the student's mark");
+	mark[0]=parseInt(input1);
+	var i = 0;
+	sum=0;
+	while (mark[i]>=0){
+	  sum=sum+mark[i];
+	  i++;
+	  studentName[i]= window.prompt("enter the student's name No."+i);
+	  input1= window.prompt("enter the student's No."+i+"mark");
+	  mark[i]=parseInt(input1);
+	}// end while
+	average=sum/i;
+         document.writeln( "<table border ='2'>" );
+         document.writeln( "<tcaption>Web 1, Section: 1 </tcaption>");
+         document.writeln( "<thead class='theadings'><tr> <th>Student Name</th> <th>Student\'s Mark</th></tr></thead>" );
+         document.writeln( "<tfoot class='theadings'><tr> <th>The Average</th> <th>"+average+"</th></tr></tfoot>" );
+
+	var j=0;
+	while (mark[j]>=0){                   
+         
+            if (mark[j]>=90)
+                 document.write( "<tr class= 'yellow'>");
+            else if (mark[j]>=60)
+                 document.write( "<tr class= 'skyblue'>");
+	    else if(mark[j]>=50)
+                 document.write( "<tr class= 'orange'>");
+	    else 
+                 document.write( "<tr class= 'red'>");
+
+            document.write( "<td>" + studentName[j] + "</td>" );
+            document.write( "<td>" + mark[j] + "</td>" );
+	    document.writeln( "</tr>" );
+           j++;    
+         } // end while
+
+         document.writeln( "</table>" );
+      </script>
+   </head><body></body>
+</html>
